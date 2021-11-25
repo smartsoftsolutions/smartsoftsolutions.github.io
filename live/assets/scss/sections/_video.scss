@@ -1,0 +1,123 @@
+// video
+.video {
+    padding: 120px 0;
+    background: url('../img/video/video-bg.jpg') center center no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    @include media-breakpoint-down(lg) {
+        padding: 80px 0;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 60px 0;
+    }
+    &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #28010f;
+        z-index: -1;
+        opacity: .78;
+    }
+    .video-btn {
+        text-align: center;
+        button {
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            margin: 20px 0;
+            border-radius: 50%;
+            border: none;
+            height: 60px;
+            @include media-breakpoint-down(lg) {
+                height: 50px;
+            }
+            img {
+                height: 50px;
+                width: 50px;
+                transform: rotate(0deg);
+                @include transition($transition);
+                @include media-breakpoint-down(lg) {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                left: 50%;
+                top: 50%;
+                width: 70px;
+                height: 70px;
+                transform: translateX(-50%) translateY(-50%);
+                background: $white;
+                opacity: .46;
+                z-index: -1;
+                border-radius: 50%;
+                animation: popping-up2 2s infinite;
+                @include media-breakpoint-down(lg) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                left: 50%;
+                top: 50%;
+                width: 100px;
+                height: 100px;
+                transform: translateX(-50%) translateY(-50%);
+                background: $white;
+                opacity: .46;
+                z-index: -1;
+                border-radius: 50%;
+                @include media-breakpoint-down(lg) {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+            &:hover {
+                img {
+                    transform: rotate(-360deg);
+                }
+            }
+        }
+    }
+}
+
+// video 2
+.video-2 {
+    padding-bottom: 80px;
+    @include media-breakpoint-down(md) {
+        padding-bottom: 60px;
+    }
+    .part-img {
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        a.play-btn {
+            display: inline-block;
+            width: 130px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            img {
+                width: 100%;
+            }
+            @include media-breakpoint-down(md) {
+                width: 100px;
+            }
+            @include media-breakpoint-down(mobile) {
+                width: 80px;
+            }
+        }
+    }
+}

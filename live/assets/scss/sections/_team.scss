@@ -1,0 +1,129 @@
+// team
+.team {
+    padding: 120px 0 90px;
+    @include media-breakpoint-down(xl) {
+        padding: 120px 0 96px;
+    }
+    @include media-breakpoint-down(lg) {
+        padding: 80px 0 56px;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 60px 0 36px;
+    }
+    .single-member {
+        box-shadow: 0px 16px 24px 0px rgba(204, 204, 204, 0.49);
+        text-align: center;
+        margin-bottom: 30px;
+        @include media-breakpoint-down(xl) {
+            margin-bottom: 24px;
+        }
+        .part-img {
+            img {
+                width: 100%;
+            }
+        }
+        .part-text {
+            padding: 24px 0 21px;
+            span {
+                display: block;
+                &.name {
+                    font-size: 20px;
+                    line-height: 30px;
+                    font-weight: 700;
+                    color: $secondary-color;
+                    margin-bottom: 3px;
+                }
+                &.designation {
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 500;
+                    color: $third-color;
+                }
+            }
+        }
+        .part-social {
+            border-top: 1px solid #e6e6e6;
+            padding: 30px 0;
+            @include media-breakpoint-down(xl) {
+                padding: 20px 0;
+            }
+            ul {
+                li {
+                    display: inline-flex;
+                    margin-right: 6px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    a {
+                        display: inline-flex;
+                        width: 50px;
+                        height: 50px;
+                        color: $base-color;
+                        border: 1px solid $base-color;
+                        font-size: 18px;
+                        border-radius: 50%;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: 0px 0px 0px 0px rgba(204, 204, 204, 0.78);
+                        @include transition($transition);
+                        background: $white;
+                        &:hover {
+                            border-color: $white;
+                            box-shadow: 0px 0px 30px 0px rgba(204, 204, 204, 0.78);
+                        }
+                        @include media-breakpoint-down(xxl) {
+                            width: 45px;
+                            height: 45px;
+                        }
+                        @include media-breakpoint-down(xl) {
+                            width: 42px;
+                            height: 42px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.style-2 {
+        .single-member {
+            .part-img {
+                padding-top: 40px;
+                padding-left: 20px;
+                padding-right: 20px;
+                img {
+                    @include transition($transition);
+                }
+            }
+            &:hover, &.active {
+                .part-img {
+                    img {
+                        border-radius: 50%;
+                    }
+                }   
+            }
+        }
+    }
+    &.style-3 {
+        background: #f9faff;
+        .single-member {
+            box-shadow: none;
+            .part-img {
+                padding: 0;
+                @include transition($transition);
+            }
+            @include transition($transition);;
+            &.active, &:hover {
+                box-shadow: 0px 16px 24px 0px rgb(204 204 204 / 49%);
+                .part-img {
+                    padding-top: 40px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+}
+  
+  

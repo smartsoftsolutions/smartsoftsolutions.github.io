@@ -1,0 +1,86 @@
+// call to action (cta)
+.cta {
+    background: $gradient-1;
+    padding: 100px 0;
+    @include media-breakpoint-down(lg) {
+        padding: 60px 0;
+    }
+    @include media-breakpoint-down(mobile) {
+        padding: 40px 0;
+    }
+    &.style-2 {
+        background: url('../img/cta-bg.jpg') center center no-repeat;
+        background-size: cover;
+        .part-text {
+            a.cta-btn {
+                background: $secondary-color;
+                &:after {
+                    background: $gradient-1;
+                }
+            }
+        }
+    }
+    .part-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
+        h2.title {
+            font-size: 36px;
+            line-height: 46px;
+            font-weight: 500;
+            color: $white;
+            margin-bottom: 0;
+            @include media-breakpoint-down(xxl) {
+                font-size: 32px;
+                line-height: 42px;
+            }
+            @include media-breakpoint-down(lg) {
+                font-size: 28px;
+                line-height: 38px;
+            }
+            @include media-breakpoint-down(md) {
+                margin-bottom: 28px;
+            }
+            @include media-breakpoint-down(mobile) {
+                font-size: 24px;
+                line-height: 34px;
+                text-align: center;
+            }
+        }
+        a.cta-btn {
+            height: 50px;
+            padding: 0 30px;
+            background: $gradient-1;
+            border: 1px solid $white;
+            border-radius: 50px;
+            color: $white;
+            line-height: 50px;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+            @include transition($transition);
+            &:after {
+                position: absolute;
+                content: '';
+                left: 1px;
+                top: 1px;
+                right: 1px;
+                bottom: 1px;
+                background: $secondary-color;
+                opacity: 0;
+                @include transition($transition);
+                border-radius: 50px;
+                z-index: -1;
+            }
+            &:hover {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

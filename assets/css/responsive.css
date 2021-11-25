@@ -1,0 +1,101 @@
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+    .banner .banner-content {
+        padding: 100px 0;
+    }
+    .credits {
+        padding: 50px 0;
+    }
+    .credits ul li img {
+        height: auto;
+        width: 30px;
+    }
+}
+
+@media (min-width:320px) and (max-width: 991px) {
+    .section-title {
+        margin-bottom: 30px;
+    }
+    .pages {
+        padding: 60px 0 30px;
+    }
+    .section-title h2 {
+        font-size: 38px;
+        line-height: 48px; 
+    }
+    .feature {
+        padding: 70px 0 0px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .banner .logo {
+        height: 40px;
+        margin-bottom: 28px;
+    }
+    .banner .banner-content h1 {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 44px;
+    }
+    .def-btn {
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 10px;
+        padding: 0 30px;
+    }
+    .section-title h2 {
+        font-size: 28px;
+        line-height: 38px; 
+    }
+    .pages .single-page .part-text {
+        padding: 8px 25px;
+    }
+    .pages .single-page .part-text span.page-name a {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .feature .single-feature .part-text h3.title {
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 600;
+    }
+    .feature .single-feature .part-icon {
+        width: 40px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 991px) {
+    .banner .logo {
+        height: 60px;
+        margin-bottom: 28px;
+    }
+    .banner .banner-content h1 {
+        font-size: 50px;
+        line-height: 64px;
+        margin-bottom: 44px;
+    }
+}
+
+@media (min-width: 992px) and (max-width:1199px) {
+    .banner .banner-content {
+        padding: 120px 0;
+    }
+    .banner .part-img {
+        display: none;
+    }
+}
+
+@media (min-width:320px) and (max-width:1199px) {
+    .container-miscoo {
+        padding: 0 15px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
+    .banner .part-img {
+        height: 290px;
+    }
+    .banner .banner-content h1 {
+        font-size: 62px;
+        line-height: 78px;
+    }
+}

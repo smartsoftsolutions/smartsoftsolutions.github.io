@@ -1,0 +1,447 @@
+// pricing
+.pricing {
+    padding: 120px 0 90px;
+    background: url('../img/price-plan/price-plan-bg.jpg') center center no-repeat;
+    background-size: cover;
+    @include media-breakpoint-down(xl) {
+        padding: 120px 0 96px;
+    }
+    @include media-breakpoint-down(lg) {
+        padding: 80px 0 56px;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 60px 0 36px;
+    }
+    &.style-2 {
+        background: url('../img/price-plan/price-plan-bg2.jpg') center center no-repeat;
+        background-size: cover;
+        .single-price {
+            background: url('../img/price-plan/single-price-bg.jpg') center center no-repeat;
+            background-size: cover;
+            text-align: left;
+            padding-left: 50px;
+            @include media-breakpoint-down(lg) {
+                padding-left: 40px;
+            } 
+            @include media-breakpoint-down(sm) {
+                padding-left: 30px;
+            }
+            .part-foot {
+                margin-bottom: 50px;
+                @include media-breakpoint-down(lg) {
+                    margin-bottom: 40px;
+                }
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+    &.style-4 {
+        background: #e7fffe;
+        .single-price {
+            background: #dff6ff;
+            border: none;
+            .part-head {
+                border-color: $base-color;
+                @include transition($transition);
+            }
+            &:hover, &.active {
+                .part-head {
+                    border-color: $white;
+                }
+            }
+        }
+    }
+    .pricing-controller {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 60px;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 40px;
+        }
+        .nav {
+            border: none;
+            .nav-item {
+                .nav-link {
+                    border-radius: 5px;
+                    border: 1px solid $base-color;
+                    height: 60px;
+                    line-height: 58px;
+                    color: $white;
+                    background: $base-color;
+                    padding: 0 30px;
+                    margin-right: 10px;
+                    font-weight: 500;
+                    font-size: 18px;
+                    position: relative;
+                    z-index: 2;
+                    @include media-breakpoint-down(xxl) {
+                        height: 55px;
+                        line-height: 53px;
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: 16px;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        height: 50px;
+                        line-height: 48px;
+                        padding: 0 25px;
+                        font-size: 15px;
+                    }
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        left: -1px;
+                        top: -1px;
+                        right: -1px;
+                        bottom: -1px;
+                        background: $gradient-1;
+                        z-index: -1;
+                        opacity: 0;
+                        @include transition($transition);
+                        border-radius: 5px;
+                    }
+                    &:hover, &.active {
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+                &:last-child {
+                    .nav-link {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    .single-price {
+        border: 2px solid #f1f1f1;
+        background: $white;
+        border-radius: 5px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 30px;
+        @include transition($transition);
+        overflow: hidden;
+        @include media-breakpoint-down(xl) {
+            margin-bottom: 24px;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            background: $gradient-1;
+            @include transition($transition);
+            z-index: -1;
+            opacity: 0;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            right: -100px;
+            top: -100px;
+            width: 100%;
+            height: 100%;
+            background: url('../img/price-plan/hover-bg.jpg') center center no-repeat;
+            background-size: cover;
+            z-index: -2;
+            opacity: 0;
+            @include transition($transition);
+        }
+        .part-head {
+            border-bottom: 2px solid #f1f1f1;
+            .pricing-name {
+                display: block;
+                color: $secondary-color;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 46px;
+                padding: 34px 0 38px;
+                @include transition($transition);
+                @include media-breakpoint-down(xxl) {
+                    font-size: 30px;
+                    line-height: 40px;                
+                }
+                @include media-breakpoint-down(lg) {
+                    font-size: 26px;
+                    line-height: 36px;
+                    padding: 24px 0 28px;
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: 24px;
+                    line-height: 36px;
+                    padding: 14px 0 18px;
+                }
+                @include media-breakpoint-down(mobile) {
+                    font-size: 22px;
+                    line-height: 32px;
+                    padding: 14px 0 18px;
+                }
+            }
+        }
+        .part-body {
+            padding: 41px 0 42px;
+            @include media-breakpoint-down(lg) {
+                padding: 31px 0 32px;
+            }
+            span {
+                display: block;
+                &.pricing-rate {
+                    font-size: 48px;
+                    line-height: 58px;
+                    color: $third-color;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                    @include transition($transition);
+                    .dollar {
+                        display: inline-block;
+                        color: $base-color;
+                        @include transition($transition);
+                    }
+                    @include media-breakpoint-down(xxl) {
+                        font-size: 42px;
+                        line-height: 52px;
+                    }
+                    @include media-breakpoint-down(lg) {
+                        font-size: 38px;
+                        line-height: 48px;
+                    }
+                    @include media-breakpoint-down(md) {                        
+                        font-size: 36px;
+                        line-height: 48px;
+                    }
+                    @include media-breakpoint-down(mobile) {
+                        font-size: 32px;
+                        line-height: 42px;
+                    }
+                }
+                &.pricing-duration {
+                    font-weight: 600;
+                    color: $third-color;
+                    font-size: 18px;
+                    font-style: italic;
+                    line-height: 28px;
+                    @include transition($transition);
+                    @include media-breakpoint-down(xxl) {
+                        font-size: 16px;
+                        line-height: 26px;
+                    }
+                }
+            }
+            ul.pricing-feature {
+                margin: 35px 0 0;
+                li {
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: $secondary-color;
+                    margin-bottom: 15px;
+                    @include transition($transition);
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    @include media-breakpoint-down(xxl) {
+                        font-size: 16px;
+                        line-height: 26px;
+                        color: #001064;
+                        margin-bottom: 10px;                    
+                    }
+                }
+            }
+        }
+        .part-foot {
+            a.order-btn {
+                display: inline-block;
+                height: 55px;
+                color: $white;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 51px;
+                border: 2px solid $white;
+                background: $base-color;
+                padding: 0 35px;
+                @include transition($transition);
+                border-radius: 5px;
+                &:hover {
+                    background: transparent;
+                }
+                @include media-breakpoint-down(xxl) {
+                    padding: 0 30px;
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: 16px;
+                }
+                @include media-breakpoint-down(sm) {
+                    height: 50px;
+                    line-height: 46px;
+                    padding: 0 25px;
+                    font-size: 15px;
+                }
+            }
+            p {
+                font-size: 18px;
+                line-height: 48px;
+                letter-spacing: 1px;
+                color: #a7a7a7;
+                margin: 34px 0 32px;
+                @include transition($transition);
+                a.cont-link {
+                    display: block;
+                    letter-spacing: 0;
+                    color: $base-color;
+                    @include transition($transition);
+                }
+                @include media-breakpoint-down(xxl) {
+                    font-size: 16px;
+                    line-height: 44px;
+                }
+                @include media-breakpoint-down(lg) {
+                    margin: 24px 0 22px;
+                }
+                @include  media-breakpoint-down(md) {
+                    margin: 14px 0 12px;
+                }
+                @include  media-breakpoint-down(mobile) {
+                    margin: 24px 0 22px;
+                }
+            }
+        }
+        &:hover, &.active {
+            border-color: transparent;
+            &:after {
+                opacity: 0.95;
+            }
+            &:before {
+                top: 0;
+                right: 0;
+                opacity: 1;
+            }
+            .part-head {
+                .pricing-name {
+                    color: $white;
+                }
+            }
+            .part-body {
+                span {
+                    &.pricing-rate {
+                        color: $white;
+                        .dollar {
+                            color: $white;
+                        }
+                    }
+                    &.pricing-duration {
+                        color: $white;
+                    }
+                }
+                ul.pricing-feature {
+                    li {
+                        color: $white;
+                    }
+                }
+            }
+            .part-foot {
+                p {
+                    color: $white;
+                    a.cont-link {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    &.style-5 {
+        background: #fdfdff;
+        .single-price {
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px 0px rgba(239, 239, 239, 0.78);
+            border: none;
+                .part-head {
+                    img.price-icon {
+                        margin: 30px 0;
+                        width: auto;
+                        height: 60px;
+                        width: auto;
+                        @include media-breakpoint-down(md) {
+                            margin: 20px 0;
+                            height: 50px;
+                        }
+                    }
+                    .pricing-name {
+                        color: $white;
+                        background: $gradient-1;
+                        font-size: 30px;
+                        line-height: 40px;
+                        padding: 15px 0 15px;
+                        @include media-breakpoint-down(xxl) {
+                            font-size: 26px;
+                            line-height: 36px;
+                        }
+                        @include media-breakpoint-down(xl) {
+                            font-size: 24px;
+                            line-height: 34px;
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: 20px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+                &:after, &:before {
+                    display: none;
+                }
+                &:hover, &.active {
+                    ul.pricing-feature {
+                        li {
+                            color: $secondary-color;
+                        }
+                    }
+                }
+                .part-body {
+                    display: flex;
+                    text-align: left;
+                    justify-content: center;
+                    ul.pricing-feature {
+                        margin-top: 0;
+                        li {
+                            font-family: $body-font;
+                            font-weight: 400;
+                            span.s-number {
+                                display: inline-block;
+                                background: $gradient-1;
+                                color: $white;
+                                width: 25px;
+                                height: 20px;
+                                line-height: 22px;
+                                text-align: center;
+                                font-size: 15px;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+                .part-foot {
+                    padding-bottom: 40px;
+                    a.order-btn2 {
+                        display: block;
+                        background: $gradient-1;
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: $white;
+                        padding: 20px 0;
+                        @include media-breakpoint-down(lg) {
+                            padding: 15px 0;
+                            font-size: 16px;
+                        }
+                    }
+                }
+        }
+    }
+}
+  

@@ -1,0 +1,58 @@
+// progress
+.part-progressbar {
+    width: 100%;
+    @include media-breakpoint-down(lg) {
+        margin-top: 50px;
+    }
+    .single-progress {
+        margin-bottom: 45px;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 30px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .part-text {
+            margin-top: -9px;
+            margin-bottom: 21px;
+            span {
+                display: inline-block;
+                font-family: $heading-font;
+                font-size: 24px;
+                left: 34px;
+                font-weight: 700;
+                @include media-breakpoint-down(xxl) {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+                &.title {
+                    color: $secondary-color;
+                }
+                &.percantage {
+                    color: $base-color;
+                }
+            }
+        }
+        .part-progress {
+            height: 10px;
+            width: 100%;
+            background: #e5e5e5;
+            border-radius: 50px;
+            position: relative;
+            &:after {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 85%;
+                background: $gradient-1;
+                border-radius: 50px;
+            }
+        }
+    }
+}

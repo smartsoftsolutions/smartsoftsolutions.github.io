@@ -1,0 +1,113 @@
+// breadcrumb 
+.breadcrumb-arfon {
+    .part-page-title {
+        background: url('../img/breadcrumb-bg.jpg') center center no-repeat;
+        background-size: cover;
+        padding: 170px 0;
+        padding-top: calc(170px + 81px);
+        @include media-breakpoint-down(xxl) {
+            padding: 160px 0;
+            padding-top: calc(160px + 81px);
+        }
+        @include media-breakpoint-down(xl) {
+            padding: 140px 0;
+            padding-top: calc(140px + 81px);
+        }
+        @include media-breakpoint-down(lg) {
+            padding: 80px 0;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 60px 0;
+        }
+        .page-name {
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 600;
+            color: $white;
+            padding: 12px 20px;
+            border: 2px solid $base-color;
+            @include media-breakpoint-down(xxl) {
+                font-size: 28px;
+                line-height: 38px;
+            }
+            @include media-breakpoint-down(xl) {
+                font-size: 24px;
+                line-height: 34px;
+            }
+            @include media-breakpoint-down(lg) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+            @include media-breakpoint-down(md) {
+                margin-bottom: 30px;
+            }
+            @include media-breakpoint-down(mobile) {
+                font-size: 18px;
+                line-height: 28px;
+                padding: 12px 15px;
+            }
+        }
+        h2.page-title {
+            font-size: 62px;
+            line-height: 74px;
+            color: $white;
+            font-weight: 700;
+            font-family: $body-font;
+            margin: -7px 0 -16px;
+            @include media-breakpoint-down(xxl) {
+                font-size: 58px;
+                line-height: 70px;
+                margin: -8px 0 -15px;
+            }
+            @include media-breakpoint-down(xl) {
+                font-size: 48px;
+                line-height: 60px;
+                margin: -7px 0 -9px;
+            }
+            @include media-breakpoint-down(lg) {
+                margin: 0;
+                font-size: 36px;
+                line-height: 46px;
+            }
+            @include media-breakpoint-down(md) {
+                font-size: 32px;
+                line-height: 42px;
+                margin: -5px 0 -10px;
+            }
+            @include media-breakpoint-down(mobile) {
+                font-size: 26px;
+                line-height: 36px;
+                margin: -5px 0 -8px;
+            }
+        }
+    }
+    .page-direction {
+        padding: 100px 0;
+        background: url('../img/brd-mn-bg.jpg') center center no-repeat;
+        background-size: cover;
+        @include media-breakpoint-down(xxl) {
+            padding: 80px 0;
+        }
+        @include media-breakpoint-down(xl) {
+            padding: 60px 0;
+        }
+        @include media-breakpoint-down(mobile) {
+            padding: 40px 0;
+        }
+        .breadcrumb-btns {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &.style-2 {
+        .part-page-title {
+            background: url('../img/breadcrumb-bg2.jpg') center center no-repeat;
+            background-size: cover;
+        }
+        .page-direction {
+            background: url('../img/brd-mn2-bg.jpg') center center no-repeat;
+            background-size: cover;
+        }
+    }
+}

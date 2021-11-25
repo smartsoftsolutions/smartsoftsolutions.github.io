@@ -1,0 +1,73 @@
+/* =================================
+ Temlate Name : Rafon | Business Agency HTML Template
+ Author Name : smartsoftsolutions
+ Date: 20/09/2021
+ Version: 1.0
+ =================================
+
+/* =================================
+ css index
+ =================================
+ *. typography
+ *. section title
+ *. preloader
+ *. scroll to top button
+ *. normalize
+ 1. header
+ 2. banner
+ 3. feature
+ 4. about
+ 5. call to action
+ 6. service
+ 7. statics
+ 8. choosing reason
+ 9. history
+ 10. portfolio
+ 11. pricing plan
+ 12. video
+ 13. team
+ 14. blog post
+ 15. testimonial
+ 16. footer 
+
+================================= */
+
+// global assets scss
+@import "main/_breakpoints";
+@import "main/_variables";
+@import "main/_mixins";
+@import "main/_global";
+@import "main/_normalize";
+@import "main/_animation";
+
+//=Section scss
+@import "sections/_header";
+@import "sections/_banner";
+@import "sections/_feature";
+@import "sections/_about";
+@import "sections/_cta";
+@import "sections/_service";
+@import "sections/_statics";
+@import "sections/_choosing-reason";
+@import "sections/_history";
+@import "sections/_portfolio";
+@import "sections/_pricing";
+@import "sections/_video";
+@import "sections/_team";
+@import "sections/_blog";
+@import "sections/_testimonial";
+@import "sections/_footer";
+
+// homepage 2 sections
+@import "sections/_live-chat-cta";
+@import "sections/_agency-history";
+@import "sections/_timer";
+@import "sections/_progress";
+
+// inner pages sections
+@import "inner_pages_section/_breadcrumb";
+@import "inner_pages_section/_contact";
+@import "inner_pages_section/_accordion";
+@import "inner_pages_section/_faq";
+@import "inner_pages_section/_registration";
+@import "inner_pages_section/_blogpage";

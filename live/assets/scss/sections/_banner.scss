@@ -1,0 +1,573 @@
+// banner
+.banner-slider {
+    background: #030615;
+    .slick-arrow {
+        width: 60px;
+        height: 60px;
+        background: $gradient-1;
+        color: $white;
+        z-index: 5;
+        position: absolute;
+        @include media-breakpoint-down(lg) {
+            display: none!important;
+        }
+        &.slick-next {
+            left: auto;
+            right: 0;
+            &:before {
+                content: '\f054';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+            }
+        }
+        &.slick-prev {
+            left: 0;
+            &:before {
+                content: '\f053';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+            }
+        }
+    }
+    .banner {
+        .banner-content {
+            @media (min-width: 1200px) and (max-width: 1250px) {
+                padding-left: 50px;
+            }
+            @media (min-width: 1251px) and (max-width: 1310px) {
+                padding-left: 30px;
+            }
+            @media (min-width: 992px) and (max-width: 1009px) {
+                padding-left: 65px;
+            }
+            @media (min-width: 1010px) and (max-width: 1050px) {
+                padding-left: 55px;
+            }
+            @media (min-width: 1051px) and (max-width: 1149px) {
+                padding-left: 25px;
+            }
+        }
+    }
+}
+.banner {
+    background: url('../img/banner-bg.jpg') center center no-repeat;
+    background-size: cover;
+    &.banner-2 {
+        background: url('../img/banner-bg2.jpg') center center no-repeat;
+        background-size: cover;
+        position: relative;
+        .crcles-btn {
+            @include media-breakpoint-down(lg) {
+                position: absolute;
+                bottom: 80px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            @include media-breakpoint-down(md) {
+                bottom: 80px;
+            }
+            @include media-breakpoint-down(sm) {
+                bottom: 30px;
+            }
+            @include media-breakpoint-down(mobile) {
+                bottom: 35px;
+            }
+            .banner-circle-btn {
+                font-family: $heading-font;
+                color: $white;
+                font-size: 18px;
+                font-weight: 600;
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                line-height: 38px;
+                border: 1px solid $base-color;
+                text-align: center;
+                border-radius: 50%;
+                position: absolute;
+                z-index: 5;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 100%;
+                    width: 1px;
+                    background: $base-color;
+                    height: 50px;
+                    @include media-breakpoint-down(lg) {
+                        display: none;
+                    }
+                }
+                @include media-breakpoint-down(xl) {
+                    width: 35px;
+                    height: 35px;
+                    line-height: 33px;
+                    font-size: 16px;
+                    &:after {
+                        height: 40px;
+                    }
+                }
+                @include media-breakpoint-down(lg) {
+                    transform: none;
+                    position: relative;
+                    left: auto!important;
+                    right: auto!important;
+                    bottom: auto!important;
+                    top: auto!important;
+                    margin-right: 15px;
+                }
+                @include media-breakpoint-down(mobile) {
+                    margin-right: 6px;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 28px;
+                }
+                &:first-child {
+                    left: 50%;
+                    top: calc(100px + 81px);
+                }
+                &:nth-child(2) {
+                    right: 100px;
+                    top: 50%;
+                    @include media-breakpoint-down(xl) {
+                        right: 50px;
+                    }    
+                }
+                &:nth-child(3) {
+                    left: 100px;
+                    bottom: 300px;
+                    @include media-breakpoint-down(xl) {
+                        left: 50px;
+                    }   
+                }
+                &:last-child {
+                    right: 40%;
+                    bottom: 100px;
+                    @include media-breakpoint-down(xl) {
+                        bottom: 50px;
+                    }
+                    @include media-breakpoint-down(lg) {
+                        margin-right: 0;
+                    }
+                }
+                &.active, &:hover {
+                    background: $base-color;
+                }
+            }
+        }
+        .part-texts {
+            position: relative;
+            .single-txt {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                opacity: 0;
+                visibility: hidden;
+                @include transition($transition);
+                &.current-post {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                p {
+                    br {
+                        @include media-breakpoint-down(xl) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .all-btn {
+            margin-top: 291px;
+            @include media-breakpoint-down(xl) {
+                margin-top: 230px;
+            }
+            @include media-breakpoint-down(lg) {
+                margin-top: 218px;
+            }
+            @include media-breakpoint-down(md) {
+                margin-top: 246px;
+            }
+            @include media-breakpoint-down(sm) {
+                margin-top: 223px;
+            }
+            @include media-breakpoint-down(mobile) {
+                // margin-top: 298px;
+            }
+            @media (min-width: 320px) and (max-width: 324px) {
+                margin-top: 298px;
+            }
+            @media (min-width: 325px) and (max-width: 350px) {
+                margin-top: 265px;
+            }
+            @media (min-width: 351px) and (max-width: 454px) {
+                margin-top: 235px;
+            }
+            @media (min-width: 455px) and (max-width: 479px) {
+                margin-top: 206px;
+            }
+        }
+    }
+
+    &.banner-3 {
+        position: relative;
+        z-index: 2;
+        background: url('../img/banner-bg-3.jpg') center center no-repeat;
+        background-size: cover;
+        &:after {
+            position: absolute;
+            content: '';
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: url('../img/banner-3-img.png') top right no-repeat;
+            background-size: 100%;
+            @include media-breakpoint-down(xl) {
+                background: url(../img/banner-3-img.png) top left no-repeat;
+                background-size: 150%;
+            }
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+        .banner-content {
+            @include media-breakpoint-down(xxl) {
+                padding: calc(200px + 81px) 0 200px;
+            }
+            @include media-breakpoint-down(lg) {
+                text-align: center;
+                padding: 100px 0;
+            }
+            h4.subtitle {
+                color: $base-color;
+                font-weight: 700;
+            }
+            h1 {
+                font-size: 48px;
+                line-height: 66px;
+                margin-bottom: 35px;
+                color: $secondary-color;
+                @include media-breakpoint-down(xxl) {
+                    font-size: 44px;
+                    line-height: 62px;
+                }
+                @include media-breakpoint-down(xl) {
+                    font-size: 40px;
+                    line-height: 56px;
+                }
+                @include media-breakpoint-down(lg) {
+                    font-size: 36px;
+                    line-height: 52px;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 30px;
+                    line-height: 44px;
+                }
+                @include media-breakpoint-down(mobile) {
+                    font-size: 26px;
+                    line-height: 40px;
+                }
+            }
+            .all-btn {
+                .banner-3-btn {
+                    height: 60px;
+                    line-height: 58px;
+                    border: 1px solid $base-color;
+                    padding: 0 35px;
+                    font-weight: 600;
+                    color: $base-color;
+                    font-size: 18px;
+                    border-radius: 5px;
+                    @include transition($transition);
+                    &:hover {
+                        background: $base-color;
+                        color: $white;
+                    }
+                    @include media-breakpoint-down(xxl) {
+                        height: 55px;
+                        line-height: 53px;
+                        padding: 0 30px;
+                        font-size: 16px;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        height: 50px;
+                        line-height: 48px;
+                        padding: 0 25px;
+                    }
+                }
+            }
+        }
+    }
+    &.banner-4 {
+        background: url('../img/banner-bg-4.jpg') center center no-repeat;
+        background-size: cover;
+        .part-img {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            height: calc(100% + 81px);
+            justify-content: center;
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+            img {
+                max-width: none;
+                width: 650px;
+                border-radius: 50%;
+            }
+        }
+        .banner-content {
+            h4.subtitle {
+                position: relative;
+                color: $base-color;
+                padding-left: 30px;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 15px;
+                    height: 15px;
+                    background: $base-color;
+                }
+                &:before {
+                    position: absolute;
+                    content: '';
+                    left: 5px;
+                    top: calc(50% + 5px);
+                    transform: translateY(-50%);
+                    width: 15px;
+                    height: 15px;
+                    background: $base-color;
+                    border-top: 1px solid $white;
+                    border-left: 1px solid $white;
+                    z-index: 2;
+                }
+            }
+            h1 {
+                color: $secondary-color;
+                line-height: 90px;
+                @include media-breakpoint-down(xxl) {
+                    line-height: 72px;
+                }
+                @include media-breakpoint-down(xl) {
+                    line-height: 62px;
+                }
+                @include media-breakpoint-down(lg) {
+                    line-height: 52px;
+                }
+                @include media-breakpoint-down(sm) {
+                    line-height: 40px;
+                }
+                @include media-breakpoint-down(mobile) {
+                    line-height: 34px;
+                }
+            }
+        }
+    }
+
+    .banner-content {
+        padding: calc(280px + 81px) 0 280px;
+        @include media-breakpoint-down(xxl) {
+            padding: calc(250px + 81px) 0 250px;
+        }
+        @include media-breakpoint-down(xl) {
+            padding: calc(200px + 81px) 0 200px;
+        }
+        @include media-breakpoint-down(lg) {
+            padding: 180px 0;
+        }
+        @include media-breakpoint-down(sm) {
+            padding: 100px 0 90px;
+        }
+        h4.subtitle {
+            color: #e3e3e3;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            margin-top: -8px;
+            @include media-breakpoint-down(xxl) {
+                font-size: 18px;
+                line-height: 28px;
+                margin-top: -7px;
+            }
+            @include media-breakpoint-down(lg) {
+                font-size: 16px;
+                line-height: 26px;
+            }
+            @include media-breakpoint-down(sm) {
+                font-size: 15px;
+                line-height: 25px;
+                margin-bottom: 14px;
+            }
+        }
+        h1 {
+            font-size: 72px;
+            line-height: 82px;
+            color: $white;
+            font-weight: 700;
+            font-family: $body-font;
+            margin-bottom: 26px;
+            @include media-breakpoint-down(xxl) {
+                font-size: 62px;
+                line-height: 72px;
+            }
+            @include media-breakpoint-down(xl) {
+                font-size: 52px;
+                line-height: 62px;
+            }
+            @include media-breakpoint-down(lg) {
+                font-size: 42px;
+                line-height: 52px;
+            }
+            @include media-breakpoint-down(sm) {
+                font-size: 30px;
+                line-height: 40px;
+            }
+            @include media-breakpoint-down(mobile) {
+                font-size: 24px;
+                line-height: 34px;
+            }
+        }
+        p {
+            font-size: 16px;
+            line-height: 28px;
+            color: #e3e3e3;
+            margin-bottom: 41px;
+        }
+        .arfon-btn {
+            border-radius: 5px;
+            height: 60px;
+            line-height: 60px;
+            padding: 0 35px;
+            position: relative;
+            font-family: $heading-font;
+            color: $white;
+            font-size: 18px;
+            font-weight: 600;
+            z-index: 2;
+            margin-right: 16px;
+            @include media-breakpoint-down(xxl) {
+                height: 55px;
+                line-height: 55px;
+                padding: 0 30px;
+                font-size: 16px;
+            }
+            @include media-breakpoint-down(sm) {
+                height: 50px;
+                line-height: 50px;
+                padding: 0 25px;
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            &.arfon-btn-1 {
+                background-image: -webkit-linear-gradient( 0deg, rgb(255,53,115) 0%, rgb(138,21,123) 100%);
+                border: 1px solid $white;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: -1px;
+                    top: -1px;
+                    right: -1px;
+                    bottom: -1px;
+                    z-index: -2;
+                    border-radius: 5px;
+                    @include transition($transition);
+                    background-image: -webkit-linear-gradient( 0deg, rgb(255,53,115) 0%, rgb(138,21,123) 100%);
+                    opacity: 0;
+                }
+                &:before {
+                    position: absolute;
+                    content: '';
+                    left: 1px;
+                    top: 1px;
+                    right: 1px;
+                    bottom: 1px;
+                    z-index: -1;
+                    border-radius: 5px;
+                    background: #020615;
+                    @include transition($transition);
+                    opacity: 0;
+                }
+                &:hover {
+                    &:after {
+                        opacity: 1;
+                    }
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+            }
+            &.arfon-btn-2 {
+                background-image: -webkit-linear-gradient( 0deg, rgb(255,53,115) 0%, rgb(138,21,123) 100%);
+                border: 1px solid $white;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: -1px;
+                    top: -1px;
+                    right: -1px;
+                    bottom: -1px;
+                    z-index: -2;
+                    border-radius: 5px;
+                    @include transition($transition);
+                    background-image: -webkit-linear-gradient( 0deg, rgb(255,53,115) 0%, rgb(138,21,123) 100%);
+                    opacity: 1;
+                }
+                &:before {
+                    position: absolute;
+                    content: '';
+                    left: 1px;
+                    top: 1px;
+                    right: 1px;
+                    bottom: 1px;
+                    z-index: -1;
+                    border-radius: 5px;
+                    background: #020615;
+                    @include transition($transition);
+                    opacity: 1;
+                }
+                &:hover {
+                    &:after {
+                        opacity: 0;
+                    }
+                    &:before {
+                        opacity: 0;
+                    }
+                }
+            }
+            i {
+                margin-left: 10px;
+            }
+        }
+    }
+    .part-img {
+        width: 100%;
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+        img {
+            width: 400px;
+            max-width: none;
+            @include media-breakpoint-down(xxl) {
+                width: 380px;
+            }
+            @include media-breakpoint-down(xl) {
+                width: 350px;
+            }
+        }
+    }
+}
+  

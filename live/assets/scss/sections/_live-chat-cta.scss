@@ -1,0 +1,44 @@
+// live-chat-cta 
+.live-chat-cta {
+    background: $gradient-1;
+    .live-chat-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @include media-breakpoint-down (md) {
+            flex-direction: column;
+        }
+        span.text {
+            color: $white;
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 600;
+            font-family: $heading-font;
+            @include media-breakpoint-down(xxl) {
+                font-size: 28px;
+                line-height: 38px;
+            }
+            @include media-breakpoint-down (md) {
+                margin: 20px 0;
+            }
+            @include media-breakpoint-down(mobile) {
+                font-size: 24px;
+                line-height: 34px;
+                text-align: center;
+            }
+        }
+        a.chat-btn {
+            background: $gradient-1-reverse;
+            color: $white;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: $heading-font;
+            padding: 30px 40px;
+            @include media-breakpoint-down (md) {
+                padding: 15px 25px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

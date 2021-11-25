@@ -1,0 +1,201 @@
+// testimonialal
+.testimonial {
+    padding: 120px 0;
+    &.style-2 {
+        background: #f3f3f3;
+        border-top: 1px solid $white;
+    }
+    &.style-3 {
+        background: url('../img/testimonial/testimonial-bg.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    &.style-4 {
+        background: #eefffb;
+    }
+    @include media-breakpoint-down(lg) {
+        padding: 80px 0;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 60px 0;
+    }
+    .all-testimonials {
+        .testi-user-slider {
+            margin-bottom: 23px;
+            margin-top: -11px;
+            .single-user {
+                transform: scale(0.7);
+                @include transition($transition);
+                border-radius: 50%;
+                overflow: hidden;
+                position: relative;
+                z-index: 2;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: $gradient-1;
+                    z-index: -1;
+                    @include transition($transition);
+                    opacity: 0;
+                }
+                img {
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 50%;
+                    @include media-breakpoint-down(mobile) {
+                        padding: 5px;
+                    }
+                }
+                &.slick-current  {
+                    transform: scale(0.9);
+                    &:after {
+                        opacity: 1;
+                    }
+                    img {
+                        padding: 10px;
+                        @include transition($transition);
+                        @include media-breakpoint-down(mobile) {
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .testi-text-slider {
+            margin-bottom: 85px;
+            @include media-breakpoint-down(mobile) {
+                margin-bottom: 60px;
+            }
+            .single-testimonial {
+                text-align: center;
+                .part-user {
+                    position: relative;
+                    padding-bottom: 36px;
+                    margin-bottom: 32px;
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        bottom: 0;
+                        height: 4px;
+                        width: 100%;
+                        background: $gradient-1;
+                    }
+                    span {
+                        display: block;
+                        &.user-name {
+                            font-size: 30px;
+                            line-height: 40px;
+                            color: $secondary-color;
+                            font-weight: 700;
+                            margin-bottom: 3px;
+                            @include media-breakpoint-down(xxl) {
+                                font-size: 26px;
+                                line-height: 36px;
+                            }
+                            @include media-breakpoint-down(lg) {
+                                font-size: 24px;
+                                line-height: 34px;
+                            }
+                            @include media-breakpoint-down(md) {
+                                font-size: 22px;
+                                line-height: 32px;
+                            }
+                            @include media-breakpoint-down(mobile) {
+                                font-size: 20px;
+                                line-height: 30px;
+                            }
+                        }
+                        &.user-location {
+                            color: $secondary-color;
+                            line-height: 26px;
+                            font-style: italic;
+                            text-transform: uppercase;
+                            @include media-breakpoint-down(mobile) {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+                p {
+                    color: $secondary-color;
+                    line-height: 30px;
+                    padding: 0 50px;
+                    @include media-breakpoint-down(mobile) {
+                        padding: 0;
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                }
+            }
+            .slick-arrow {
+                background: red;
+                top: 100%;
+                width: 50px;
+                height: 50px;
+                background: $white;
+                @include transition($transition);
+                border-radius: 50%;
+                margin-top: 60px;
+                border: 1px solid $base-color;
+                @include media-breakpoint-down(mobile) {
+                    margin-top: 40px;
+                    width: 40px;
+                    height: 40px;
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: -1px;
+                    top: -1px;
+                    right: -1px;
+                    bottom: -1px;
+                    background: $gradient-1;
+                    z-index: -1;
+                    opacity: 1;
+                    @include transition($transition);
+                    border-radius: 50%;
+                }
+                &:before {
+                    color: $white;
+                    @include transition($transition);
+                }
+                &:hover {
+                    &:after {
+                        opacity: 0;
+                    }
+                    &:before {
+                        color: $base-color;
+                    }
+                }
+                &:before {
+                    content: '\f061';
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    @include media-breakpoint-down(mobile) {
+                        font-size: 15px;
+                    }
+                }
+                &.slick-prev {
+                    left: calc(50% - 70px);
+                    &:before {
+                        content: '\f060';
+                    }
+                    @include media-breakpoint-down(mobile) {
+                        left: calc(50% - 50px);
+                    }
+                }
+                &.slick-next {
+                    right: calc(50% - 70px);
+                    left: auto;
+                    @include media-breakpoint-down(mobile) {
+                        right: calc(50% - 50px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,129 @@
+// statics
+.statics {
+    padding: 100px 0 70px;
+    background: url('../img/banner-bg.jpg') center center no-repeat;
+    background-size: cover;
+    @include media-breakpoint-down(lg) {
+        padding: 60px 0 36px;
+    }
+    @include media-breakpoint-down(mobile) {
+        padding: 40px 0 16px;
+    }
+    &.style-2 {
+        background: url('../img/history-bg.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    .single-statics {
+        text-align: center;
+        position: relative;
+        margin-bottom: 30px;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 24px;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 5px;
+            background: $gradient-1;
+            @include media-breakpoint-down(sm) {
+                width: 200px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        span {
+            display: block;
+            &.number {
+                font-size: 48px;
+                line-height: 58px;
+                font-weight: 700;
+                color: $white;
+                margin-top: -8px;
+                margin-bottom: 11px;
+                @include media-breakpoint-down(xxl) {
+                    font-size: 44px;
+                    line-height: 54px;
+                }
+                @include media-breakpoint-down(xl) {
+                    font-size: 42px;
+                    line-height: 52px;
+                }
+                @include media-breakpoint-down(lg) {
+                    font-size: 38px;
+                    line-height: 48px;
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: 36px;
+                    line-height: 46px;
+                }
+                @include media-breakpoint-down(mobile) {
+                    font-size: 34px;
+                    line-height: 44px;
+                }
+            }
+            &.title {
+                font-size: 20px;
+                line-height: 30px;
+                color: $base-color;
+                font-weight: 600;
+                padding-bottom: 37px;
+                @include media-breakpoint-down(xxl) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+                @include media-breakpoint-down(lg) {
+                    font-size: 17px;
+                    line-height: 27px;
+                    padding-bottom: 27px;
+                }
+            }
+        }
+    }
+    &.style-3 {
+        background: url('../img/statics-bg.jpg') center center no-repeat;
+        background-size: cover;
+        .single-statics {
+            display: inline-block;
+            width: 100%;
+            &::after {
+                background: -webkit-linear-gradient(0deg, #ff3573 0%, #ffffff 100%);
+            }
+            span {
+                display: inline-block;
+                &.number {
+                    font-weight: 300;
+                    font-family: $heading-font;
+                    font-style: italic;
+                    position: relative;
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        bottom: 0;
+                        background: $white;
+                    }
+                }
+                &.title {
+                    font-weight: 300;
+                    font-style: italic;
+                    color: $white;
+                    position: relative;
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        top: 27px;
+                        background: $white;
+                    }
+                }
+            }
+        }
+    }
+}

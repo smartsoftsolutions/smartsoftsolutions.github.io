@@ -1,0 +1,140 @@
+// blog
+.blog {
+    padding: 120px 0 90px;
+    background: #fbfbfb;
+    &.style-2 {
+        background: #fff0ed;
+    }
+    &.style-3 {
+        background: $white;
+    }
+    @include media-breakpoint-down(xl) {
+        padding: 120px 0 96px;
+    }
+    @include media-breakpoint-down(lg) {
+        padding: 80px 0 56px;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 60px 0 36px;
+    }
+    .single-blog {
+        margin-bottom: 30px;
+        border-radius: 6px;
+        box-shadow: 0px 0px 21px 0px rgba(212, 212, 212, 0.78);
+        padding: 10px;
+        margin-top: 15px;
+        margin-left: 15px;
+        position: relative;
+        background: $white;
+        z-index: 2;
+        @include media-breakpoint-down(xl) {
+            margin-bottom: 24px;
+        }
+        
+        @include media-breakpoint-down(mobile) {
+            padding: 0;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            left: -15px;
+            top: -15px;
+            width: 100px;
+            height: 100px;
+            background: $base-color;
+            z-index: -2;
+            border-radius: 6px;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: $white;
+            z-index: -1;
+            border-radius: 6px;
+        }
+        .part-img {
+            border-radius: 10px;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+            @include media-breakpoint-down(mobile) {
+                border-radius: 0;
+            }
+        }
+        .part-text {
+            padding: 34px 20px 23px;
+            @include media-breakpoint-only(lg) {
+                padding: 34px 10px 23px;
+            }
+            h4.title {
+                font-size: 24px;
+                line-height: 34px;
+                font-family: $body-font;
+                color: $third-color;
+                font-weight: 700;
+                margin-bottom: 18px;
+                @include media-breakpoint-down(xxl) {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+                @include media-breakpoint-only(lg) {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+                @include media-breakpoint-only(md) {
+                    font-size: 21px;
+                    line-height: 31px;
+                }
+                @include media-breakpoint-down(mobile) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+            .blog-stats {
+                margin-bottom: 15px;
+                ul {
+                    li {
+                        display: inline-block;
+                        margin-right: 24px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        span {
+                            &.sts-icon {
+                                @include text-gradient-1;
+                                font-size: 14px;
+                                line-height: 24px;
+                                margin-right: 6px;
+                            }
+                            &.sts-txt {
+                                font-size: 14px;
+                                line-height: 24px;
+                                color: $p-color;
+                            }
+                        }
+                    }
+                }
+            }
+            p {
+                color: $p-color;
+                line-height: 30px;
+                @include media-breakpoint-down(mobile) {
+                    font-size: 15px;
+                    line-height: 25px;
+                }
+            }
+            a.read-more-btn {
+                color: $base-color;
+                font-family: $heading-font;
+                font-weight: 700;
+                margin-top: 12px;
+            }
+        }
+    }
+}
+  

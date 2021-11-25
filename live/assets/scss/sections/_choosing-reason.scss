@@ -1,0 +1,232 @@
+// choosing reason
+.choosing-reason {
+    padding: 120px 0 90px;
+    &.style-for-about {
+        background: #e0e0e0;
+        .single-reason {
+            &.active, &:hover {
+                background: $white;
+            }
+        }
+    }
+    &.style-for-about-2 {
+        background: url("../img/choosing-reason/bg-to2.jpg") center center no-repeat;
+        background-size: cover;
+        .single-reason {
+            background: $white;
+        }
+    }
+    @include media-breakpoint-down(xl) {
+        padding: 120px 0 96px;
+    }
+    @include media-breakpoint-down(lg) {
+        padding: 80px 0 56px;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 60px 0 36px;
+    }
+    &.for-service-details {
+        padding-bottom: 120px;
+        @include media-breakpoint-down(xl) {
+            padding-bottom: 120px;
+        }
+        @include media-breakpoint-down(lg) {
+            padding-bottom: 80px;
+        }
+        @include media-breakpoint-down(md) {
+            padding-bottom: 60px;
+        }
+    }
+    &.style-3 {
+        .single-reason {
+            box-shadow: none;
+            @include transition($transition);
+            &:hover, &.active {
+                box-shadow: 0px 0px 80px 0px rgba(201, 201, 201, 0.78);              
+            }
+            .part-icon {
+                position: relative;
+                z-index: 2;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background: $white;
+                    z-index: -1;
+                }
+                img {
+                    background: $white;
+                }
+            }
+        }
+    }
+    .single-reason {
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 20px 0px rgba(239, 239, 239, 0.78);
+        border-radius: 5px;
+        padding: 50px 30px;
+        padding-bottom: 25px;
+        position: relative;
+        text-align: center;
+        @include media-breakpoint-down(xl) {
+            padding: 40px 25px;
+            padding-bottom: 15px;
+            margin-bottom: 24px;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 40px 30px;
+            padding-bottom: 15px;
+        }
+        span.number {
+            font-size: 18px;
+            color: $white;
+            font-weight: 700;
+            background: $base-color;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 5px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .part-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            background: $gradient-1;
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 40px;
+            }
+            @include media-breakpoint-down(xxl) {
+                width: 70px;
+                height: 70px;
+                img {
+                    width: 30px;
+                }
+            }
+        }
+        .part-text {
+            span.title {
+                display: block;
+                font-size: 22px;
+                line-height: 32px;
+                color: $secondary-color;
+                font-weight: 700;
+                margin-top: 33px;
+                margin-bottom: 14px;
+                @include media-breakpoint-down(xl) {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+            p {
+                color: $p-color;
+                line-height: 28px;
+                @include media-breakpoint-down(mobile) {
+                    font-size: 15px;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+    &.style-2 {
+        .single-reason {
+            background: url('../img/choosing-reason/bg-to.jpg') center center no-repeat;
+            background-size: cover;
+            position: relative;
+            z-index: 2;
+            .part-text {
+                span.title, p {
+                    @include transition($transition);
+                }
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: $white;
+                z-index: -1;
+                opacity: 1;
+                @include transition($transition);
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                left: 15px;
+                top: 15px;
+                right: 15px;
+                bottom: 15px;
+                background: $gradient-1;
+                z-index: -1;
+                @include transition($transition);
+                opacity: 1;
+            }
+            &:hover, &.active {
+                &:after {
+                    opacity: 0;
+                }
+                &:before {
+                    opacity: 1;
+                }
+                .part-text {
+                    span.title, p {
+                        color: $white;
+                    }
+                }
+            }
+            span.number {
+                display: none;
+            }
+        }
+    }
+    &.style-5 {
+        .single-reason {
+            border-radius: 0;
+            border: 2px solid $base-color;
+            padding-left: 25px;
+            padding-right: 25px;
+            @include transition($transition);
+            &:after {
+                position: absolute;
+                content: '';
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -2px;
+                height: 3px;
+                background: $gradient-1;
+                width: 0;
+                @include transition($transition);
+            }
+            span.number {
+                border-radius: 0 0 5px 0;
+                opacity: 0;
+                visibility: hidden;
+                @include transition($transition);
+            }
+            &:hover, &.active {
+                border: 2px solid transparent;
+                &:after {
+                    width: 70%;
+                }
+                span.number {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+  

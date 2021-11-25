@@ -1,0 +1,119 @@
+// accordion
+.accordion-rafon {
+    padding: 90px 0 120px;
+    @include media-breakpoint-down(xl) {
+        padding: 96px 0 120px;
+    }
+    @include media-breakpoint-down(lg) {
+        padding: 56px 0 80px;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 36px 0 60px;
+    }
+    &.faq-page-accordion {
+        padding-top: 0;
+    }
+    .accordion {
+        .accordion-item {
+            margin-top: 30px;
+            border: none;
+            &:first-child {
+                margin-top: 0;
+            }
+            .accordion-header {
+                background: $gradient-1;
+                position: relative;
+                border-radius: 10px;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    right: 80px;
+                    top: 0;
+                    height: 100%;
+                    background: $white;
+                    width: 1px;
+                }
+                .accordion-button {
+                    background: none;
+                    box-shadow: none;
+                    color: $white;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    display: flex;
+                    padding: 0;
+                    @include media-breakpoint-down(lg) {
+                        padding: 15px 0;
+                    }
+                    &:after {
+                        position: absolute;
+                        width: 20px;
+                        height: 2px;
+                        background: $white;
+                        right: calc(80px / 2 - 9px);
+                    }
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        width: 2px;
+                        height: 0;
+                        background: $white;
+                        right: calc(80px / 2);
+                        top: 50%;
+                        transform: translateY(-50%);
+                        @include transition($transition);
+                    }
+                    &:not(.collapsed) {
+                        &:after {
+                            transform: none;
+                        }
+                        &:before {
+                            height: 20px;
+                        }
+                    }
+                    span {
+                        &.icon {
+                            border-right: 1px solid $white;
+                            height: 80px;
+                            width: 80px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            img {
+                                width: 24px;
+                            }
+                            @include media-breakpoint-down(lg) {
+                                display: none;   
+                            }
+                        }
+                        &.text {
+                            padding-left: 30px;
+                            padding-right: 110px;
+                            line-height: 26px;
+                        }
+                    }
+                }
+            }
+            .accordion-collapse {
+                .accordion-body {
+                    color: $secondary-color;
+                    line-height: 30px;
+                    padding: 0;
+                    margin: 30px 80px 0;
+                    padding-left: 30px;
+                    border-left: 2px solid #e1e1e1;
+                    @include media-breakpoint-down(xl) {
+                        margin-left: 72px;
+                    }
+                    @include media-breakpoint-down(lg) {
+                        margin-left: 5px;
+                    }
+                    @include media-breakpoint-down(mobile) {
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+// timer
+.timers {
+    padding: 80px 0;
+    background: url('../img/timer-bg.jpg') center center no-repeat;
+    background-size: cover;
+    @include media-breakpoint-down(lg) {
+        padding: 60px 0;
+    }
+    .timer-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        &.first {
+            align-items: flex-start;
+        }
+        .arfon-lg-btn-3 {
+            i {
+                margin-left: 10px;
+            }
+        }
+    }
+    .part-countdown {
+        @include media-breakpoint-down(lg) {
+            margin: 20px 0;
+        }
+        @include media-breakpoint-down(md) {
+            margin-bottom: 0;
+        }
+        .timer {
+            .single-count {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 2px solid #0000ff;
+                padding: 17px 0 18px;
+                @include media-breakpoint-down(md) {
+                    margin-bottom: 24px;
+                }
+                span {
+                    &.tm {
+                        font-size: 30px;
+                        line-height: 40px;
+                        font-weight: 700;
+                        color: $base-color;
+                        margin-bottom: 3px;
+                        @include media-breakpoint-down(xl) {
+                            font-size: 28px;
+                            line-height: 38px;
+                        }
+                    }
+                    &.title {
+                        font-size: 18px;
+                        color: $secondary-color;
+                        font-weight: 700;
+                        text-transform: capitalize;
+                        @include media-breakpoint-down(xl) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
